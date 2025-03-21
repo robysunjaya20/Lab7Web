@@ -56,3 +56,31 @@ Kemudian refrest http://localhost:8080/about dan akan menampilkan
 
 Kemudian tambahkan css sehingga menampilkan
 ![Screenshot 2025-03-22 002113](https://github.com/user-attachments/assets/b712be94-0d75-4a68-81bb-3cc55faf35e5)
+
+
+Praktikum 2: Framework Lanjutan (CRUD)
+1. Buat database dengan nama lab_ci4, kemudian buat tabel dengan nama artikel
+![image](https://github.com/user-attachments/assets/d811098b-ecdb-472e-8553-684b1d9c380c)
+2. Konfigurasi koneksi database pada fie .env
+   ![image](https://github.com/user-attachments/assets/3015f8ec-7cbc-4e58-8b1c-c1f3de1462d5)
+3. Membuat Model untuk memproses data Artikel
+   Buat file baru pada direktori app/Models dengan nama ArtikelModel.php
+   ![image](https://github.com/user-attachments/assets/d5e447f1-755d-4a25-a83a-e686f103cb32)
+4. Buat Controller baru dengan nama Artikel.php pada direktori app/Controllers.
+   ![image](https://github.com/user-attachments/assets/d7859c41-a68d-4e09-a79c-654442de8041)
+5. Buat direktori baru dengan nama artikel pada direktori app/views, kemudian buat file baru dengan nama index.php
+   ![image](https://github.com/user-attachments/assets/3dbc2eb7-d4af-46cd-8e20-f052d13a3346)
+6. buka browser kembali, dengan mengakses url http://localhost:8080/artikel 
+   ![image](https://github.com/user-attachments/assets/390ca551-d370-47bf-b625-1d2bcca669ca)
+7. Kemudian tambahkan beberapa data pada database agar dapat ditampilkan datanya.
+   ![image](https://github.com/user-attachments/assets/b144d6a1-abbb-424a-8763-ce0a4af637d9)
+   sehingga menampilkan
+   ![image](https://github.com/user-attachments/assets/856c63dc-962a-46a1-88a2-38d10b077344)
+
+
+
+
+
+   
+
+

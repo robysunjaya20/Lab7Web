@@ -79,7 +79,18 @@ Praktikum 2: Framework Lanjutan (CRUD)
 8. Tambahkan fungsi baru pada Controller Artikel dan view detail sehingga pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda.
    ![image](https://github.com/user-attachments/assets/5033d25b-7306-4ef8-8ec2-949406dc870d)
 9. Membuat Menu Admin dengan cara buat method baru pada Controller Artikel dengan nama admin_index() dan buat view untuk tampilan admin dengan nama admin_index.php serta tambahkan routing untuk menu admin
-    ![image](https://github.com/user-attachments/assets/4970d6f1-e58b-4e8a-8d2b-57b8024fe494)
+    ![image](https://github.com/user-attachments/assets/37e9840f-f110-424f-a0e9-1d0aa6ef32bc)
+10. Tambah data
+    ![image](https://github.com/user-attachments/assets/9c03bb51-791f-4c7d-99b4-6b083c9a1b87)
+11. Edit data
+    ![image](https://github.com/user-attachments/assets/d13704ba-8689-4792-8e9b-9936a5d966aa)
+13. Hapus data
+    ![image](https://github.com/user-attachments/assets/fbb28377-eddc-4dd1-9fc4-1167cf5b129c)
+
+12. 
+
+
+    
 
 
 

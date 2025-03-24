@@ -1,5 +1,5 @@
-# My Project
-Praktikum 1: PHP Framework (Codeigniter)
+# Praktikum 1: PHP Framework (Codeigniter)
+
 Dalam praktikum ini kita akan membuat tampilan seperti berikut
 ![Screenshot 2025-03-22 002113](https://github.com/user-attachments/assets/92484f33-6886-431b-b0bb-e4578a6aa4d2)
 
@@ -83,7 +83,7 @@ Praktikum 2: Framework Lanjutan (CRUD)
 10. Tambah data
     ![image](https://github.com/user-attachments/assets/9c03bb51-791f-4c7d-99b4-6b083c9a1b87)
 11. Edit data
-    ![image](https://github.com/user-attachments/assets/d13704ba-8689-4792-8e9b-9936a5d966aa)
+    ![image](https://github.com/user-attachments/assets/bb4e84ec-e671-4c53-b5eb-cd45104709d4)
 13. Hapus data
     ![image](https://github.com/user-attachments/assets/fbb28377-eddc-4dd1-9fc4-1167cf5b129c)
 

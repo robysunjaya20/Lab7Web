@@ -91,8 +91,10 @@ Praktikum 2: Framework Lanjutan (CRUD)
 
 
     
-
-
+# manfaat utama dari penggunaan View Layout dalam pengembangan aplikasi
+1. untuk membuat template tampilan yang dapat digunakan kembali
+2. Layout desain UI tetap seragam di seluruh halaman.
+3. Memisahkan Logika dan Tampilan sehingga code lebih bersih dan mudah dibaca
 
 
 

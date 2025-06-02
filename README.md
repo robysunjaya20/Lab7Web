@@ -1,45 +1,108 @@
-# Praktikum 1: PHP Framework (Codeigniter)
+# Praktikum PHP Framework (CodeIgniter 4)
 
-Dalam praktikum ini kita akan membuat tampilan seperti berikut
-![Screenshot 2025-03-22 002113](https://github.com/user-attachments/assets/92484f33-6886-431b-b0bb-e4578a6aa4d2)
+## 📌 Praktikum 1: Pengenalan CodeIgniter 4
 
-sebelum itu ada beberapa exstensi yang harus diaktifkan, yaitu:
-• php-json ekstension untuk bekerja dengan JSON; 
-• php-mysqlnd native driver untuk MySQL; 
-• php-xml ekstension untuk bekerja dengan XML; 
-• php-intl ekstensi untuk membuat aplikasi multibahasa; 
-• libcurl (opsional), jika ingin pakai Curl. 
+### Persiapan Awal
+1. Aktifkan ekstensi PHP di `php.ini` (pada XAMPP):
+   ```ini
+   extension=json
+   extension=mysqli
+   extension=xml
+   extension=intl
+   extension=curl
 
-Untuk mengaktifkannya kita setting php.ini pada xampp seperti berikut
 ![image](https://github.com/user-attachments/assets/cb47a03b-7932-4ba6-a008-24e36916b047)
 
-Lalu download Codeigniter dari website https://codeigniter.com/download kemudian Extrak file zip Codeigniter ke direktori htdocs/lab11_ci dan ubah namanya menjadi ci4
+### 1. Instalasi CodeIgniter
+
+Langkah-langkah instalasi CodeIgniter secara manual:
+
+1. **Unduh CodeIgniter**  
+   Kunjungi situs resmi CodeIgniter:  
+   👉 [https://codeigniter.com/download](https://codeigniter.com/download)
+
+2. **Ekstrak File Zip**  
+   Ekstrak hasil unduhan ke direktori htdocs/Lab7Web
+
+3. **Ubah Nama Direktori**  
+Ganti nama folder hasil ekstraksi (contoh: `CodeIgniter-4.x.x`) menjadi: ci4
+
+---
+
+### 2. Menjalankan CLI via XAMPP
+
+1. **Buka Terminal / Command Prompt**
+2. **Arahkan ke Direktori Proyek**
+```bash
+cd xampp/htdocs/Lab7Web/ci4
+
+```
+3. ** Lalu masukan perintah: php spark serve
 
 sehingga saat kita mengakses http://localhost:8080/ pada browser menampilkan
 ![Screenshot 2025-03-21 235111](https://github.com/user-attachments/assets/7b776fc9-39ba-4606-95f4-3ee96a82859c)
 
-Codeigniter 4 menyediakan fitur debugging untuk memudahkan developer untuk mengetahui pesan error apabila terjadi kesalahan dalam membuat kode program. 
-Secara default fitur ini belum aktif. Ketika terjadi error pada aplikasi akan ditampilkan pesan kesalahan seperti berikut. 
-![Screenshot 2025-03-21 235900](https://github.com/user-attachments/assets/d350fdee-bf8c-4246-b51e-b69bf6fdf047)
+### 3. Mengaktifkan Mode Debugging
 
-Untuk mengaktifkan mode debugging rename file env menjadi .env dan mengubah nilai konfigurasi pada environment variable CI_ENVIRINMENT pada .env menjadi development.
+CodeIgniter 4 menyediakan **fitur debugging** untuk membantu developer melihat detail pesan error saat terjadi kesalahan dalam kode program.
+
+#### Langkah-langkah Mengaktifkan Debug Mode:
+
+1. **Ubah Konfigurasi Environment**
+   - Buka file `env` yang ada di root project.
+   - Cari baris berikut:
+     ```ini
+     CI_ENVIRONMENT = production
+     ```
+   - Ubah menjadi:
+     ```ini
+     CI_ENVIRONMENT = development
+     ```
 ![image](https://github.com/user-attachments/assets/d8d3827e-69f4-43eb-bff3-c11caffe17ff)
-Sehingga saat ada kesalahan pada program kita browser akan menampilkan
+
+2. **Rename File `env`**
+   - Ganti nama file `env` menjadi `.env`
+
+#### Contoh Error
+
+Jika terjadi kesalahan seperti **menghapus function `index()` pada file**:
 ![Screenshot 2025-03-22 000029](https://github.com/user-attachments/assets/def8f63d-ed58-4707-b2d4-d57d29815e5e)
 
+## Routing dan Controllers
+
+Routing dalam **CodeIgniter 4** adalah proses menghubungkan URL (permintaan pengguna) ke **controller dan method** tertentu. Routing memungkinkan kita mengatur bagaimana URL ditangani dan diarahkan ke aksi yang sesuai dalam aplikasi.
+
+### Mengatur Routing (Auto Routing)
+
+Secara default, CodeIgniter 4 mengaktifkan **Auto Routing** yang memungkinkan URL dipetakan otomatis ke controller. Namun **Auto Routing sangat tidak disarankan untuk production** karena bisa menyebabkan celah keamanan.
+
+#### Menonaktifkan Auto Routing
+
+Untuk menonaktifkannya, buka file: app/Config/Routes.php 
+Kemudian ubah atau tambahkan baris berikut:
+```php
+$routes->setAutoRoute(false);
+```
+
+### Membuat Route baru
 Langkah-langkah membuatnya
 1. Buat route Tambahkan kode berikut di dalam Routes.php 
+   ```php
    $routes->get('/about', 'Page::about'); 
-  $routes->get('/contact', 'Page::contact'); 
-  $routes->get('/faqs', 'Page::faqs');
+   $routes->get('/contact', 'Page::contact'); 
+   $routes->get('/faqs', 'Page::faqs');
+   ```
+   
 Jika berhasil saat ketik php spark routes pada CMD menampilkan:
 ![Screenshot 2025-03-22 000409](https://github.com/user-attachments/assets/82bf7eeb-4988-42d4-ba21-1bf7f22f3ebc)
+
 2. Buat Controller pada directory Controller
-   Buat file page.php kemudian isi kodenya seperti berikut.
+Buat file page.php kemudian isi kodenya seperti berikut.
+
    ![image](https://github.com/user-attachments/assets/7318a866-971f-472b-a43d-7884b4bf5058)
   Setelah itu saat kita membuka http://localhost:8080/about akan menampilkan
 ![Screenshot 2025-03-22 001349](https://github.com/user-attachments/assets/68f154bd-58bd-4cb7-9d18-fcfb1612454c)
-3. buat View 
+4. buat View 
 Buat file baru dengan nama about.php pada direktori view (app/view/about.php) kemudian isi kodenya seperti berikut.
 ![image](https://github.com/user-attachments/assets/944e3b34-caec-4035-8392-4552c3b337a2)
 dan ubah method about pada class Controller Page menjadi seperti berikut:

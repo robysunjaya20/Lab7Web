@@ -100,11 +100,14 @@ Jika berhasil saat ketik php spark routes pada CMD menampilkan:
 Buat file page.php kemudian isi kodenya seperti berikut.
 
    ![image](https://github.com/user-attachments/assets/7318a866-971f-472b-a43d-7884b4bf5058)
-  Setelah itu saat kita membuka http://localhost:8080/about akan menampilkan
+
+Setelah itu saat kita membuka http://localhost:8080/about akan menampilkan
 ![Screenshot 2025-03-22 001349](https://github.com/user-attachments/assets/68f154bd-58bd-4cb7-9d18-fcfb1612454c)
+
 4. buat View 
 Buat file baru dengan nama about.php pada direktori view (app/view/about.php) kemudian isi kodenya seperti berikut.
 ![image](https://github.com/user-attachments/assets/944e3b34-caec-4035-8392-4552c3b337a2)
+
 dan ubah method about pada class Controller Page menjadi seperti berikut:
 ![image](https://github.com/user-attachments/assets/fce21bf7-1b67-4fd0-8b25-ac5b26e5473a)
 

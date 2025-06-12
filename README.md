@@ -15,7 +15,7 @@ Repositori ini berisi panduan praktikum untuk memahami dan menerapkan framework 
    extension=xml
    extension=intl
    extension=curl
-   ```ini
+   ```
 
 ![Aktivasi Ekstensi](https://github.com/user-attachments/assets/cb47a03b-7932-4ba6-a008-24e36916b047)
 

@@ -1,4 +1,4 @@
-# 💻 Praktikum PHP Framework (CodeIgniter 4)
+![image](https://github.com/user-attachments/assets/271720ae-e8f4-47be-acac-a44ab3aef858)# 💻 Praktikum PHP Framework (CodeIgniter 4)
 
 Repositori ini berisi panduan praktikum untuk memahami dan menerapkan framework **CodeIgniter 4**, mulai dari pengenalan konsep dasar hingga membangun aplikasi sederhana dengan fitur **CRUD**.
 
@@ -353,10 +353,13 @@ Buat file artikel_terkini.php di dalam app/Views/components/ dengan kode berikut
 
 ### Jawaban dari Pertanyaan dan Tugas
 View Layout adalah elemen tata letak (seperti StackLayout, Grid, AbsoluteLayout) yang digunakan untuk menyusun dan mengatur posisi elemen-elemen UI (View) di layar.
+
 Manfaat utamanya:
+
 Pengaturan UI yang fleksibel: Memungkinkan pengembang menyusun elemen dengan tata letak horizontal, vertikal, atau grid sesuai kebutuhan.
 Respon terhadap berbagai ukuran layar: Layout memudahkan desain UI yang adaptif dan responsif.
-Pengelompokan elemen: Memungkinkan pengelompokan logis elemen, seperti mengelompokkan
+Pengelompokan elemen: Memungkinkan pengelompokan logis elemen
+
 Perbedaan antara View dan ViewCell
 Fungsi utama view Menampilkan elemen UI seperti Label, Image, Button
 Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam daftar
@@ -366,58 +369,78 @@ Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam da
 
 ### Modul Login
 
-1. Buat Table Baru
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/31a.BuatTabel.png)
+1. Buat Table Baru dengan nama 'users'
+   ![image](https://github.com/user-attachments/assets/c11177e6-63a8-4340-9279-e1109ffe8628)
 
 2. Membuat Model User
    Buat file baru pada direktori `app/Models` dengan nama `UserModel.php`
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/31b.BuatModelUser.png)
+   ![image](https://github.com/user-attachments/assets/9712ac2d-7b38-40fa-8ec3-289088b581a5)
 
 3. Membuat Controller User
    Buat Controller baru dengan nama `User.php` pada direkdirektori app/Controllers. Kemudian tambahkan method **index()** untuk
    menampilkan daftar user dan method **login()** untuk proses login
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/31c.BuatUser.png)
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/31d.BuatUser2.png)
+   ![image](https://github.com/user-attachments/assets/85676052-c316-4ea4-9bf5-b236a80dd7e8)
 
 4. Membuat Halaman Login
    Buat direktori baru pada `app/Views` dengan nama `user` kemudian buat file di dalamnya dengan nama `login.php`
    lalu tambahkan code berikut ini
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/32a.BuatHalamanLogin.png)
+   ![image](https://github.com/user-attachments/assets/7339388e-41bb-4868-8740-9b037707c3d3)
 
 5. Membuat Database Seeder
    Database seeder digunakan untuk membuat data dummy. Untuk keperluan ujicoba modul
    login, kita perlu memasukkan data user dan password kedaalam database. Untuk itu buat
    database seeder untuk tabel user. Buka CLI, kemudian tulis perintah berikut:
-
+   **cd C:\xampp\htdocs\lab7_web\ci4**
    **php spark make:seeder UserSeeder**
+   ![image](https://github.com/user-attachments/assets/d1230284-32d7-40c1-919a-89b0ce616c8e)
+
 
    Selanjutnya, buka file `UserSeeder.php` yang berada di lokasi direktori
    `/app/Database/Seeds/UserSeeder.php` kemudian isi dengan kode berikut:
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/32b.BuatDataSeeder.png)
+   ![image](https://github.com/user-attachments/assets/88a4bb42-355b-4259-b4e2-259c2cd81dd3)
+
 
    Selanjutnya buka kembali Terminal atau CLI dengan shortcut **ctrl+Shift+`** lalu ketikan perintah berikut
 
    `php spark db:seed UserSeeder`
+   ![image](https://github.com/user-attachments/assets/cc2a86a3-6297-4d51-b801-78cd42380610)
 
-   Lakukan uji coba login
+6. Tambahkan route untuk login
+   ```route
+   $routes->get('user', 'User::index');
+   $routes->group('user', function($routes) {
+      $routes->get('login', 'User::login');
+      $routes->post('login', 'User::login');
+      $routes->get('logout', 'User::logout');
+   });
+   ```
+
+7. Lakukan uji coba login
    Buka url `http://localhost:8080/user/login`
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/33.Hasil.png)
+   ![image](https://github.com/user-attachments/assets/c18d1370-5bd5-4301-b295-6b8276cde352)
 
-6. Menambahkan Auth Filter
+8. Menambahkan Auth Filter
    Buat file untuk halaman admin dengan nama `Auth.php` pada `app/Filters` lalu isi kode ini
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/34a.TambahkanAuth.png)
+   ![image](https://github.com/user-attachments/assets/80e7aaa0-d84a-460e-8e90-f02f56ae2ddc)
 
-7. Buka `app/Config/Filters.php` untuk menambahkan kode berikut ini
-   ![image alt}](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/34b.TambahkanAuthPadaFilters.png)
+9. Buka `app/Config/Filters.php` untuk menambahkan kode berikut ini
+   ![image](https://github.com/user-attachments/assets/0fa7f1f6-ac84-4b23-97bd-093450d3fa44)
 
-8. Buka `app/Config/Routes.php` kemudian ubah routes menjadi seperti ini
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/35a.UbahRoutes.png)
+10. Buka `app/Config/Routes.php` kemudian ubah routes menjadi seperti ini
+   ![image](https://github.com/user-attachments/assets/e12fb778-a219-4f89-9a4b-7520ad9933bf)
 
-9. Tambahkan Function Logout pada app/Controller/User.php
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/35b.TambahFuncLogout.png)
+11. Tambahkan Function Logout pada app/Controller/User.php
+   '''logout
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/user/login');
+    }
+    ```
 
-10. Hasil
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/33.Hasil.png)
+13. Hasil
+    ![image](https://github.com/user-attachments/assets/5b9d7117-2c0c-4e36-a7e0-a1f3f535fc94)
+
 
 # Praktikum 5
 

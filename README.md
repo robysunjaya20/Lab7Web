@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/271720ae-e8f4-47be-acac-a44ab3aef858)# 💻 Praktikum PHP Framework (CodeIgniter 4)
+💻 Praktikum PHP Framework (CodeIgniter 4)
 
 Repositori ini berisi panduan praktikum untuk memahami dan menerapkan framework **CodeIgniter 4**, mulai dari pengenalan konsep dasar hingga membangun aplikasi sederhana dengan fitur **CRUD**.
 
@@ -447,24 +447,26 @@ Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam da
 ## Pagination & Search Bar
 
 1. Buka `app/Controller/Artikel.php` untuk memodifikasi codingan berikut ini
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/35a.EditAdminIndex.png)
+   ![image](https://github.com/user-attachments/assets/4f5db0b2-cc56-4550-bd49-182a87886dfc)
 
    Kemudian buka file views/artikel/admin_index.php dan tambahkan kode berikut dibawah deklarasi tabel data.
-
    `<?= $pager->links(); ?>`
+   ![image](https://github.com/user-attachments/assets/7e509250-6e71-461d-b6e3-8ebba24c00e9)
+   ![image](https://github.com/user-attachments/assets/9b7b76f0-fc50-4292-8ecc-60f29540cbcf)
 
-2. Untuk membuat Search Bar buka kembali `app/Controller/Artikel.php` lalu modifikasi codingan berikut ini
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/35a.EditAdminIndex.png)
+3. Untuk membuat Search Bar buka kembali `app/Controller/Artikel.php` lalu modifikasi codingan berikut ini
+   ![image](https://github.com/user-attachments/assets/9e9618f9-690b-4758-9332-22db4ad4e68c)
 
-3. Buka `app/Views/artikel/admin_index.php` lalu tambahkan codingan berikut
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/38.tambahSearch.png)
+4. Buka `app/Views/artikel/admin_index.php` lalu tambahkan codingan berikut
+   ![image](https://github.com/user-attachments/assets/ed8d97a7-4c65-405b-a2b0-74cd81cc73c4)
 
-4. Tambahkan link pager pada bagian bawah deklarasi tabel seperti berikut ini
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/37.TambahPaginationDibawahHtml.png)
+5. Tambahkan link pager pada bagian bawah deklarasi tabel seperti berikut ini
+   ![image](https://github.com/user-attachments/assets/62622a31-5acc-4562-8d5f-f9c7e0e9447e)
 
-5. Hasil
+6. Hasil
 
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/013987ca6364b81a3ce063e03c6ce6119f1cd83f/ci4/screnshoot/36.Hasil.png)
+   ![image](https://github.com/user-attachments/assets/8b515dac-a0e4-4b27-851b-593b5fe0ed10)
+
 
 # Praktikum 6
 

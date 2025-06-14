@@ -188,76 +188,72 @@ Refresh kembali browser, sehingga akan ditampilkan hasilnya.
 ![image](https://github.com/user-attachments/assets/27c5437b-2c18-4493-978c-c48b0e81a132)
 
 
-### Ubah `Home.php` menjadi
-
-![App Screenshot](./screnshoot//16Ubahhome.php.png)
-
-### Membuat Artikel Sementara di PHPMyAdmin
-
-# ![App Screenshot](./screnshoot/17BuatArtikelSementara.png)
-
-![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/14MembuatControllerHome.png)
-
-### Buat Perubahan Kecil Pada `Routes.php`
-
-![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/15RoutesPHP.png)
-
-### Ubah `Home.php` menjadi
-
-![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/16Ubahhome.php.png)
-
-### Membuat Artikel Sementara di PHPMyAdmin
-
-![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/17BuatArtikelSementara.png)
-
 ### Membuat Tampilan Detail Artikel
 
-1. Ubah func Artikel pada `app/Controllers/Page.php`
+1. Tambahkan fungsi baru pada Controller Artikel dengan nama view().
 
-   # ![App Screenshot](./screnshoot/18ubahFuncArtikel.png)
+  ```view()
+  public function view($slug)
+  {
+      $model = new ArtikelModel();
+      $artikel = $model->where([
+          'slug' => $slug
+      ])->first();
+  
+      // Menampilkan error apabila data tidak ada
+      if (!$artikel) {
+          throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+      }
+  
+      $title = $artikel['judul'];
+      return view('artikel/detail', compact('artikel', 'title'));
+  }
+  ```
 
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/18ubahFuncArtikel.png)
+2. Membuat View Detail 
+Buat view baru untuk halaman detail dengan nama app/views/artikel/detail.php.
+![image](https://github.com/user-attachments/assets/409e9aa3-f1a3-4765-befb-706f0a6ecab4)
 
-2. Membuat View baru di app/Views/artikel.php dan membuat routing baru di `app/Config/Routes.php`
-   dan ubah dengan code
+3. Membuat Routing untuk artikel detail 
+Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artikel detail. 
+```routes
    **$routes->get('page/artikel/(:any)', 'Page::artikel/$1');**
-
-   ![App Screenshot](./screnshoot/19buatartikel.phpViews.png)
+```
 
 3. Hasil
-   ![App Screenshot](./screnshoot/20hasilDetailArtikel.png)
+   ![image](https://github.com/user-attachments/assets/a1493656-5bc6-4e16-a346-8df0744f924e)
+
 
 ### Membuat Menu Admin
 
 1.  Membuat Method baru pada Controllers `app/Controllers/Artikel.php` dengan nama **admin_index()**
-    ![App Screenshot](./screnshoot/21MembuatControllerArtikel.php.png)
+    ```admin_index
+        public function admin_index()  
+    { 
+        $title = 'Daftar Artikel'; 
+        $model = new ArtikelModel(); 
+        $artikel = $model->findAll(); 
+        return view('artikel/admin_index', compact('artikel', 'title')); 
+    }
+    ```
 
 2.  Menuju direktori `app/Views` lalu buat **admin_index.php**
-    ![App Screenshot](./screnshoot/22BuatAdminIndex.png)
+    ![Screenshot 2025-06-14 101021](https://github.com/user-attachments/assets/32db06ab-e15b-4b67-928d-7335829505c9)
 
+    
 3.  Tambah routes di `app/Config/Routes.php` untuk menu admin
-    ![App Screenshot](./screnshoot/23TambahRoutes.php.png)
+    ```routes
+    $routes->group('admin', function($routes) {
+      $routes->get('artikel', 'Artikel::admin_index');
+      $routes->add('artikel/add', 'Artikel::add');
+      $routes->add('artikel/edit/(:any)', 'Artikel::edit/$1');
+      $routes->get('artikel/delete/(:any)', 'Artikel::delete/$1');
+  });
+  ```
 
 4.  Hasil Output
-    ![App Screenshot](./screnshoot/25hasilAdmin.png)
-    =======
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/19buatartikel.phpViews.png)
+    ![image](https://github.com/user-attachments/assets/4226ff85-10fd-4706-b3c5-13eed3526c1d)
 
-5.  Hasil
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/20hasilDetailArtikel.png)
-
-### Membuat Menu Admin
-
-1.  Membuat Method baru pada Controllers `app/Controllers/Artikel.php` dengan nama **admin_index()**
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/21MembuatControllerArtikel.php.png)
-2.  Menuju direktori `app/Views` lalu buat **admin_index.php**
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/22BuatAdminIndex.png)
-
-3.  Tambah routes di `app/Config/Routes.php` untuk menu admin
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/23TambahRoutes.php.png)
-
-4.  Hasil Output
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/25HasilAdmin.png)
 
 ### Menambah Data Artikel
 

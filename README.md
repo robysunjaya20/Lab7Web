@@ -300,72 +300,67 @@ Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artike
 
 # Praktikum 3
 
+### Membuat Layout Utama 
+Buat folder layout di dalam app/Views/ dan buat file main.php di dalamnya
+![image](https://github.com/user-attachments/assets/0a10c63d-a916-4342-a42e-fb8659384c91)
+
+### Ubah app/Views/home.php agar sesuai dengan layout baru
+```home
+<?= $this->extend('layout/main') ?> 
+ 
+<?= $this->section('content') ?> 
+ 
+<h1><?= $title; ?></h1>  
+<hr>  
+<p><?= $content; ?></p>  
+ 
+<?= $this->endSection() ?>
+```
+
 ### Membuat Class View Cell
 
 Membuat Direktori Cells di dalam `app` lalu buat file `Artikel.php` pada `app/Cells`
+```cells
+<?php
 
-# ![App Screenshot](./screnshoot/28aViewCels.png)
+namespace App\Cells;
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/28aViewCels.png)
+use CodeIgniter\View\Cell;
+use App\Models\ArtikelModel;
+
+class ArtikelTerkini extends Cell
+{
+    public function render()
+    {
+        $model = new ArtikelModel();
+        $artikel = $model->orderBy('created_at', 'DESC')
+                         ->limit(5)
+                         ->findAll();
+
+        return view('components/artikel_terkini', [
+            'artikel' => $artikel
+        ]);
+    }
+}
+```
+
 
 ### Membuat View untuk View Cells
 
-1. Lakukan perubahan field pada database dengan menambahkan tanggal agar dapat mengambil data artikel terbaru
+Buat folder components di dalam app/Views/ 
+Buat file artikel_terkini.php di dalam app/Views/components/ dengan kode berikut:
+![image](https://github.com/user-attachments/assets/dbd7c9f9-b6d0-4a6f-a320-9ad32b6bb93b)
 
-   ![App Screenshot](./screnshoot/29aMembuatdatabaru.png)
+### Jawaban dari Pertanyaan dan Tugas
+View Layout adalah elemen tata letak (seperti StackLayout, Grid, AbsoluteLayout) yang digunakan untuk menyusun dan mengatur posisi elemen-elemen UI (View) di layar.
+Manfaat utamanya:
+Pengaturan UI yang fleksibel: Memungkinkan pengembang menyusun elemen dengan tata letak horizontal, vertikal, atau grid sesuai kebutuhan.
+Respon terhadap berbagai ukuran layar: Layout memudahkan desain UI yang adaptif dan responsif.
+Pengelompokan elemen: Memungkinkan pengelompokan logis elemen, seperti mengelompokkan
+Perbedaan antara View dan ViewCell
+Fungsi utama view Menampilkan elemen UI seperti Label, Image, Button
+Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam daftar
 
-2. Buat folder component di `app/Views` yang didalamnya berisi `artikel_katgori.php & artikel_terkini.php`
-   ![App Screenshot](./screnshoot/29bMembuatArtikelTerkini.png)
-3. Isikan code di dalam file `artikel_terkini.php`
-   ![App Screenshot](./screnshoot/29c.png)
-4. Modifikasi `app/Views/layout/main.php`
-   ![App Screenshot](./screnshoot/29dModifikasiLayout.png)
-   =======
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/29aMembuatdatabaru.png)
-5. Buat folder component di `app/Views` yang didalamnya berisi `artikel_katgori.php & artikel_terkini.php`
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/29bMembuatArtikelTerkini.png)
-6. Isikan code di dalam file `artikel_terkini.php`
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/29c.png)
-7. Modifikasi `app/Views/layout/main.php`
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/29dModifikasiLayout.png)
-
-### Mengubah Views Cells agar Menampilkan Kategori tertentu
-
-1. Menambahkan data baru / column baru untuk kategori
-
-   ![App Screenshot](./screnshoot/29dMembuatColumnDataKategori.png)
-
-2. Modifikasi model di `app/Models/ArtikelModel.php
-   ![App Screenshot](./screnshoot/30aModifikasiArtikelMoels.png)
-3. Membuat File `ArtikelKategori.php` baru pada folder `app/Cells`
-   ![App Screenshot](./screnshoot/30cMembuatFileArtikelKategori.png)
-4. Membuat file `artikel_kategori.php` baru pada folder `app/Views/components`.
-   ![App Screenshot](./screnshoot/30dMembuatartikel_kategori.php.png)
-5. Modifikasi code di file `app/Views/layout/main.php`
-   ![App Screenshot](./screnshoot/30dModifLyout.php.png)
-6. Tambahkan code berikut di file `app/Config/Routes.php`
-   ![App Screenshot](./screnshoot/30eTambahRoutes.png)
-7. Tambah Method kategori controller di `app/Controllers/Home.php`
-   ![App Screenshot](./screnshoot/30fModifHome.php.png)
-8. Hasil Output
-   ![App Screenshot](./screnshoot/LASSTTTT.png)
-
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/29dMembuatColumnDataKategori.png)
-
-9. Modifikasi model di `app/Models/ArtikelModel.php
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/30aModifikasiArtikelMoels.png)
-10. Membuat File `ArtikelKategori.php` baru pada folder `app/Cells`
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/30cMembuatFileArtikelKategori.png)
-11. Membuat file `artikel_kategori.php` baru pada folder `app/Views/components`.
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/30dMembuatartikel_kategori.php.png)
-12. Modifikasi code di file `app/Views/layout/main.php`
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/30dModifLyout.php.png)
-13. Tambahkan code berikut di file `app/Config/Routes.php`
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/30eTambahRoutes.png)
-14. Tambah Method kategori controller di `app/Controllers/Home.php`
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/30fModifHome.php.png)
-15. Hasil Output
-    ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/LASSTTTT.png)
 
 # Praktikum 4
 

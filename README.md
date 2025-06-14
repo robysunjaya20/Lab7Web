@@ -248,8 +248,8 @@ Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artike
       $routes->add('artikel/add', 'Artikel::add');
       $routes->add('artikel/edit/(:any)', 'Artikel::edit/$1');
       $routes->get('artikel/delete/(:any)', 'Artikel::delete/$1');
-  });
-  ```
+    });
+    ```
 
 4.  Hasil Output
     ![image](https://github.com/user-attachments/assets/4226ff85-10fd-4706-b3c5-13eed3526c1d)
@@ -257,59 +257,46 @@ Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artike
 
 ### Menambah Data Artikel
 
-1. Menambah Func baru pada `app/Controllers/Artikel.php dengan **Add()**
+1. Menambah Func baru pada `app/Controllers/Artikel.php dengan nama **Add()**
 
-   ![App Screenshot](./screnshoot/23TambahFungsiAdd.png)
+   ![image](https://github.com/user-attachments/assets/f60c5a28-b2c5-4d3a-9ab4-6dd31ac20dfc)
 
-2. Buat **add.php** di `app/Views` untuk form tambah artikel
-   ![App Screenshot](./screnshoot/24BuatAdd.phpDiViews.png)
+
+2. Buat **form_add.php** di `app/Views/artikel` untuk form tambah artikel
+   ![image](https://github.com/user-attachments/assets/8c441bd1-0fe0-4665-9ab7-de32e91547bb)
+
 
 3. Hasil Output
-   ![App Screenshot](./screnshoot/25hasilAdd.png)
-   ![App Screenshot](./screnshoot/25HasilAdd1.png)
-   =======
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/23TambahFungsiAdd.png)
+   ![image](https://github.com/user-attachments/assets/c3d04df1-20f0-4561-87ea-c297c4e9e8f9)
+    ![image](https://github.com/user-attachments/assets/6d6546fc-ee62-4fa4-8aca-d94c6d914972)
 
-4. Buat **add.php** di `app/Views` untuk form tambah artikel
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/24BuatAdd.phpDiViews.png)
-5. Hasil Output
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/25hasilAdd.png)
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/25HasilAdd1.png)
 
 ### Edit Data
 
 1. Menambahkan func baru pada `app/Controllers/Artikel.php` dengan nama **edit($id)**
 
-   ![App Screenshot](./screnshoot/26EditPhp.png)
+   ![image](https://github.com/user-attachments/assets/d6c09c46-8995-47b9-87d6-d63cd721f48f)
 
-2. Buat `edit.php` di `app/Views` untuk form edit artikel
-   ![App Screenshot](./screnshoot/26editphphtml.png)
+
+2. Buat `form_edit.php` di `app/Views/artikel` untuk form edit artikel
+   ![image](https://github.com/user-attachments/assets/86ba4a0c-b7a7-4163-a023-d74db9de6878)
+
 
 3. Hasil Output
-   ![App Screenshot](./screnshoot/25HasilEdit.png)
-   =======
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/26EditPhp.png)
+   ![image](https://github.com/user-attachments/assets/0e826be9-d110-4da8-90c0-be6cf6bb0243)
+   ![image](https://github.com/user-attachments/assets/94164103-c976-4919-afc6-d17e20b3f071)
 
-4. Buat `edit.php` di `app/Views` untuk form edit artikel
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/26editphphtml.png)
 
-5. Hasil Output
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/25HasilEdit.png)
 
 ### Menghapus Data
 
 1. Tambah Func baru pada `app/Controllers/Artikel.php` dengan nama **delete($id)**
 
-   ![App Screenshot](./screnshoot/27DeletePHP.png)
+   ![image](https://github.com/user-attachments/assets/7b5751bc-a921-4ccb-a995-47b051960da1)
 
-2. Hasil Output "P" terhapus
-   ![App Screenshot](./screnshoot/25HasilAdd1.png)
-   ![App Screenshot](./screnshoot/25HasilDelete.png)
-   =======
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/27DeletePHP.png)
-3. Hasil Output "P" terhapus
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/25HasilAdd1.png)
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/5c0754a252edb3a3fdab76d6dcb838fb5384336e/ci4/screnshoot/25HasilDelete.png)
+2. Hasil Output "artikel ketiga" terhapus
+![image](https://github.com/user-attachments/assets/22ee82c4-2889-4641-aec1-fc09881c37f2)
+
 
 # Praktikum 3
 

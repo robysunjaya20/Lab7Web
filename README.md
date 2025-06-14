@@ -474,21 +474,18 @@ Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam da
 
 1. Buka direktori `app/Controller/Artikel.php` lalu edit code menjadi seperti ini
 
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/d60c04447806713984dd9488fbe12be5c1f83c03/ci4/screnshoot/39.TambahFuncGambar.png)
+   ![image](https://github.com/user-attachments/assets/70ef8463-d46c-45cd-8b51-6fa26e4945bb)
 
-2. Lalu pada `app/Views/add.php` tambahkan kode berikut
+2. Lalu pada `app/Views/form_add.php` tambahkan kode berikut
 
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/d60c04447806713984dd9488fbe12be5c1f83c03/ci4/screnshoot/40.editAddphp.png)
+   ![image](https://github.com/user-attachments/assets/073ed160-52bc-414c-b4b2-4afca31cca90)
 
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/d60c04447806713984dd9488fbe12be5c1f83c03/ci4/screnshoot/41.tambahKolomFormgambar.png)
+   ![image](https://github.com/user-attachments/assets/47d54d8e-3e25-4b9a-882f-92e8ad99b1ed)
 
 3. Hasil
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/d60c04447806713984dd9488fbe12be5c1f83c03/ci4/screnshoot/42.Hasil1.png)
+![image](https://github.com/user-attachments/assets/24d08d71-dba1-4e81-bcc6-06d1c591bf0f)
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/d60c04447806713984dd9488fbe12be5c1f83c03/ci4/screnshoot/42.Hasil2.png)
-
-![image alt](https://github.com/ardhvka/Lab7web/blob/d60c04447806713984dd9488fbe12be5c1f83c03/ci4/screnshoot/43.Hasil3.png)
 
 # Praktikum 7
 

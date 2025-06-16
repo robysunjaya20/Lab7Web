@@ -489,27 +489,40 @@ Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam da
 
 # Praktikum 7
 
-### Membuat Tabel baru
+###  Membuat Tabel Kategori 
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax1.png)
+```querysql
+CREATE TABLE kategori (
+    id_kategori INT(11) AUTO_INCREMENT,
+    nama_kategori VARCHAR(100) NOT NULL,
+    slug_kategori VARCHAR(100),
+    PRIMARY KEY (id_kategori)
+);
+```
 
-### Relasi Antar Kategori
+### Mengubah Tabel Artikel 
+Tambahkan foreign key `id_kategori` pada tabel `artikel` untuk membuat relasi dengan tabel `kategori`.  
+![image](https://github.com/user-attachments/assets/59d5bf6c-5930-4a09-950b-182dacf901d9)
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax2.png)
 
-### Testing Sessions
+### Membuat Model Kategori 
+![image](https://github.com/user-attachments/assets/bf5f1458-d857-4d75-9bf8-2c25c8bc1d27)
 
-1. Menampilkan Daftar Artikel
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax3.png)
-2. Pada Halaman Admin
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax4.png)
-   3.Menambahkan Artikel Baru dan Kategori Baru
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax5.png)
-3. Artikel Baru Berhasil Ditambahkan
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax6.png)
-4. Artikel dan Kategori baru berhasil tampil
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax7.png)
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax8.png)
+### Memodifikasi Model Artikel 
+![image](https://github.com/user-attachments/assets/1f509be1-ee0e-4175-b4f3-8ebfae602dbd)
+
+### Memodifikasi Controller Artikel 
+![image](https://github.com/user-attachments/assets/3fef0014-bc7d-4196-bcc7-d998b5b3f9d7)
+
+### Memodifikasi View index.php, admin_index.php, form_add.php, form_edit.php, 
+![image](https://github.com/user-attachments/assets/cb4749bf-a30d-46f7-8368-ff637123b654)
+
+![image](https://github.com/user-attachments/assets/57f2c33b-cc2a-41a5-a018-d195d3e8204d)
+
+### Hasil Run
+![image](https://github.com/user-attachments/assets/db31c3e6-58b4-48b8-9590-e1bce1e4a7a2)
+
+
 
 # Praktikum 8
 

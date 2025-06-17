@@ -557,7 +557,7 @@ Tambahkan foreign key `id_kategori` pada tabel `artikel` untuk membuat relasi de
 ### Membuat Ajax Search Bar & Pagination
 
 1. Edit Method _admin_index()_ seperti ini
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/0d8b3a144ca9f7719aa3dc1782baddd97558fd01/ci4/screnshoot/ajax15.png)
+   ![image](https://github.com/user-attachments/assets/e4b0bf3c-9490-4659-bfdd-f52932cd018b)
 
 2. Edit file `admin_ajax.php` menjadi seperti ini
    ![image alt](https://github.com/ardhvka/Lab7web/blob/0d8b3a144ca9f7719aa3dc1782baddd97558fd01/ci4/screnshoot/ajax16.png)

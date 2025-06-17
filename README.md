@@ -545,10 +545,12 @@ Tambahkan foreign key `id_kategori` pada tabel `artikel` untuk membuat relasi de
 ### Hasil
 
 1. routes `$routes->get('admin/ajax', 'AjaxController::index');`
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax13.png)
+   ![image](https://github.com/user-attachments/assets/88cd15b3-264e-4f06-8f3b-acbd5c28d065)
+
 
 2. routes `$routes->get('ajax/getData', 'AjaxController::getData');`
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax14.png)
+   ![image](https://github.com/user-attachments/assets/b0854130-94b1-4d32-9a3f-e1c5ea646560)
+
 
 # Praktikum 9
 

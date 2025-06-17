@@ -528,19 +528,19 @@ Tambahkan foreign key `id_kategori` pada tabel `artikel` untuk membuat relasi de
 
 ### Menambahkan Pustaka jQuery
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax9.png)
+![image](https://github.com/user-attachments/assets/8f648c87-acf8-40bf-9f12-8b24a8ce58b3)
 
 ### Membuat Ajax Controller
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax10.png)
+![image](https://github.com/user-attachments/assets/b187b07a-23be-48c9-a06f-edfa57428d3a)
 
-### Make View
+### Membuat View 
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax11.png)
+![image](https://github.com/user-attachments/assets/a3a13984-ec28-4b52-9761-2de504613dc1)
 
-### Make Routes
+### Membuat Routes
 
-![image alt](https://github.com/ardhvka/Lab7web/blob/bf2178571f69c16c72f39e08aee80e4311a7e4eb/ci4/screnshoot/ajax12.png)
+![image](https://github.com/user-attachments/assets/25f19cec-6885-41b0-a823-639a2a5dc4c1)
 
 ### Hasil
 

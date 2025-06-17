@@ -564,9 +564,8 @@ Tambahkan foreign key `id_kategori` pada tabel `artikel` untuk membuat relasi de
 
 
 3. Hasil
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/0d8b3a144ca9f7719aa3dc1782baddd97558fd01/ci4/screnshoot/ajax17.png)
+   ![image](https://github.com/user-attachments/assets/203b4bd7-fd0d-4332-ac30-7d23b02fd8b4)
 
-   ![image alt](https://github.com/ardhvka/Lab7web/blob/0d8b3a144ca9f7719aa3dc1782baddd97558fd01/ci4/screnshoot/ajax18.png)
 
 
 # Praktikum 10

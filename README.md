@@ -677,10 +677,21 @@ Buat Project baru dengan struktur file dan directory seperti berikut:
 ```
 
 ### Menampilkan data 
-File index.html 
-File apps.js 
+### File index.html 
+
+
+### File apps.js 
+
 
 ### Sispkan kode Form Tambah dan Ubah Data Pada file index,html
+
+
 ### Pada File app.js lengkapi kodenya. 
+
+
 ### File style.css
+
+
+
+
 

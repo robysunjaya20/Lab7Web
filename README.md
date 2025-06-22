@@ -653,3 +653,34 @@ Tambahkan foreign key `id_kategori` pada tabel `artikel` untuk membuat relasi de
      
       ![image](https://github.com/user-attachments/assets/10d7e78f-65bc-45ce-9295-54f224541413)
 
+
+# Praktikum 11
+### VueJS
+VuesJS merupakan sebuah framework JavaScript untuk membangun aplikasi web atau tampilan interface website agar lebih interaktif. VueJS dapat digunakan untuk membangun aplikasi berbasis user interface, seperti halaman web, aplikasi mobile, dan aplikasi desktop. 
+
+### Langkah-langkah Praktikum
+Untuk memulai penggunaan framework Vuejs, dapat dialkukan dengan menggunakan npm, atau bisa juga dengan cara manual. Untuk praktikum kali ini kita akan gunakan cara manual. Yang diperlukan adalah library Vuejs, Axios untuk melakukan call API REST. Menggunakan CDN.
+Library VueJS 
+``` <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  ```
+Library Axios 
+``` <script src="https://unpkg.com/axios/dist/axios.min.js"></script> ```
+
+### Struktur Direktory 
+Buat Project baru dengan struktur file dan directory seperti berikut: 
+ ```struktur
+│   index.html 
+└───assets 
+    ├───css 
+    │       style.css 
+    └───js 
+            app.js 
+```
+
+### Menampilkan data 
+File index.html 
+File apps.js 
+
+### Sispkan kode Form Tambah dan Ubah Data Pada file index,html
+### Pada File app.js lengkapi kodenya. 
+### File style.css
+

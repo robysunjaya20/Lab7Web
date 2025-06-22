@@ -402,10 +402,11 @@ Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam da
 
    Selanjutnya buka kembali Terminal atau CLI dengan shortcut **ctrl+Shift+`** lalu ketikan perintah berikut
 
-   `php spark db:seed UserSeeder`
+   ```php spark db:seed UserSeeder```
+   
    ![image](https://github.com/user-attachments/assets/cc2a86a3-6297-4d51-b801-78cd42380610)
 
-6. Tambahkan route untuk login
+7. Tambahkan route untuk login
    ```route
    $routes->get('user', 'User::index');
    $routes->group('user', function($routes) {
@@ -415,21 +416,21 @@ Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam da
    });
    ```
 
-7. Lakukan uji coba login
+8. Lakukan uji coba login
    Buka url `http://localhost:8080/user/login`
    ![image](https://github.com/user-attachments/assets/c18d1370-5bd5-4301-b295-6b8276cde352)
 
-8. Menambahkan Auth Filter
+9. Menambahkan Auth Filter
    Buat file untuk halaman admin dengan nama `Auth.php` pada `app/Filters` lalu isi kode ini
    ![image](https://github.com/user-attachments/assets/80e7aaa0-d84a-460e-8e90-f02f56ae2ddc)
 
-9. Buka `app/Config/Filters.php` untuk menambahkan kode berikut ini
+10. Buka `app/Config/Filters.php` untuk menambahkan kode berikut ini
    ![image](https://github.com/user-attachments/assets/0fa7f1f6-ac84-4b23-97bd-093450d3fa44)
 
-10. Buka `app/Config/Routes.php` kemudian ubah routes menjadi seperti ini
+11. Buka `app/Config/Routes.php` kemudian ubah routes menjadi seperti ini
    ![image](https://github.com/user-attachments/assets/e12fb778-a219-4f89-9a4b-7520ad9933bf)
 
-11. Tambahkan Function Logout pada app/Controller/User.php
+12. Tambahkan Function Logout pada app/Controller/User.php
    '''logout
     public function logout()
     {

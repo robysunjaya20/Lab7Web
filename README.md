@@ -431,11 +431,12 @@ Fungsi utama ViewCell Membungkus View agar dapat digunakan sebagai item dalam da
    ![image](https://github.com/user-attachments/assets/e12fb778-a219-4f89-9a4b-7520ad9933bf)
 
 12. Tambahkan Function Logout pada app/Controller/User.php
-    ``` public function logout()
-          {
-              session()->destroy();
-              return redirect()->to('/user/login');
-          }
+    ```logout
+    public function logout()
+      {
+          session()->destroy();
+          return redirect()->to('/user/login');
+      }
       ```
 
 13. Hasil

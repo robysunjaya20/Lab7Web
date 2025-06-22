@@ -578,80 +578,77 @@ Tambahkan foreign key `id_kategori` pada tabel `artikel` untuk membuat relasi de
   3. Membuat REST Controller
      REST Controller yang berisi fungsi untuk menampilkan, menambah, mengubah dan menghapus data. Caranya buat file ``Post.php`` di ``app/Controller`` dengan code seperti ini
      
-     ![image](https://github.com/user-attachments/assets/6a49fbd5-e967-49a0-bb92-54ff684705a7)
-
+     ![Screenshot 2025-06-22 070110](https://github.com/user-attachments/assets/69cf473c-f69c-44e1-a631-280c1bec85f0)
 
   4. Membuat Routing REST API
      Masuk ke direktori app/Config dan bukalah file Routes.php. Tambahkan kode ``` $routes->resource('post');  ```
-  6. Lalu cek route nya jalankan perintah ``` php spark routes ``` di cmd
+  5. Lalu cek route nya jalankan perintah ``` php spark routes ``` di cmd.
      Satu baris kode routes yang di tambahkan akan menghasilkan banyak Endpoint seperti pada gambar dibawah ini.
 
      ![image](https://github.com/user-attachments/assets/e6331de5-8161-4fee-a09f-380d221afc6c) 
      
-    
-
-  3.  ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api3.png)
 
 ## Testing Rest API 
 
   1. Buka aplikasi postman dan pilih create new → HTTP Request
-     ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api4.png)
-     
+     ![image](https://github.com/user-attachments/assets/95c22896-917a-4428-9f04-ee07b9fc90be)
+
   2. Menampilkan Semua Data
      
      Pilih method GET dan masukkan URL berikut:
-     http://localhost:8080/post
+     ``` http://localhost:8080/post ```
 
      lalu klik send
-     ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api5.png)
-     ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api6.png)
+     ![image](https://github.com/user-attachments/assets/16628512-51f2-4cb6-84ff-c0ca4c5949a4)
+     ![image](https://github.com/user-attachments/assets/b4c075c4-770f-4cc0-a6c6-fb17277310cb)
 
-  3. Mengubah data
+  3. Menampilkan Data Spesifik
+     Masih menggunakan method GET, hanya perlu menambahkan ID artikel di belakang URL seperti ``` http://localhost:8080/post/2  ```
+     Selanjutnya, klik Send.
+     ![image](https://github.com/user-attachments/assets/99ae72a9-bf4f-449d-8edc-d20448cb2796)
+
+  4. Mengubah data
   
       Untuk mengubah data, silakan ganti method menjadi PUT. Kemudian, masukkan URL artikel
       yang ingin diubah. Misalnya, ingin mengubah data artikel dengan ID nomor 2, maka masukkan
       URL berikut:
      
-      http://localhost:8080/post/1
+      ``` http://localhost:8080/post/1 ```
      
       Selanjutnya, pilih tab Body. Kemudian, pilih x-www-form-uriencoded. Masukkan nama
       atribut tabel pada kolom KEY dan nilai data yang baru pada kolom VALUE. Kalau sudah,
       klik Send.
 
-      ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api7.png)
+      ![image](https://github.com/user-attachments/assets/f71cab86-a6a0-4e86-9098-139fb0bffb5a)
 
-     ### Berhasil Diubah
-
-      ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api8.png)
-
-  4. Menambah Data
+  5. Menambah Data
      
       Anda perlu menggunakan method POST untuk menambahkan data baru ke database.
       Kemudian, masukkan URL berikut:
      
-      http://localhost:8080/post
+      ``` http://localhost:8080/post ```
      
       Pilih tab Body, lalu pilih x-www-form-uriencoded. Masukkan atribut tabel pada kolom KEY
       dan nilai data baru di kolom VALUE. Jangan lupa, klik Send.
      
-      ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api9.png)
-     
+      ![image](https://github.com/user-attachments/assets/a2360ec1-a876-41b6-8d0c-b5aa04e31c85)
+
      ### Berhasil Ditambahkan
      
-      ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api9Hasil.png)
+      ![image](https://github.com/user-attachments/assets/fc891b0a-8246-4b79-92f3-c62b503bbef9)
 
-  5. Menghapus Data
+
+  7. Menghapus Data
       Pilih method DELETE untuk menghapus data. Lalu, masukkan URL spesifik data mana yang
-      ingin di hapus. Misalnya, ingin menghapus data nomor 4, maka URL-nya seperti ini:
+      ingin di hapus. Misalnya, ingin menghapus data nomor 3, maka URL-nya seperti ini:
      
-      http://localhost:8080/post/7
+      http://localhost:8080/post/3
      
       Langsung Send
 
-       ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api10.png)
+       ![image](https://github.com/user-attachments/assets/c01184d2-116d-4ef6-b3fe-6268b4e16739)
 
       ### Berhasil Terhapus
      
-      ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api10Hasil.png)
-
+      ![image](https://github.com/user-attachments/assets/10d7e78f-65bc-45ce-9295-54f224541413)
 

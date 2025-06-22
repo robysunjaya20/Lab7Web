@@ -570,14 +570,25 @@ Tambahkan foreign key `id_kategori` pada tabel `artikel` untuk membuat relasi de
 
 # Praktikum 10
 ### API
-  1. Membuat file ``Post.php`` di ``app/Controller`` dengan code seperti ini
-     
-     ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api1.png)
 
-  2. Menambahkan Routes 
-  
-  ``$routes->resource('post'); `` 
-      ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api2.png)
+  1. Unduh aplikasi REST Client, ada banyak aplikasi yang dapat digunakan untuk keperluan tersebut. disini kita akan unduh postman di ``` https://www.postman.com/downloads/ ```
+  2. Membuat Model.
+     Pada modul sebelumnya sudah dibuat ArtikelModel, pada modul ini kita akan memanfaatkan model tersebut agar dapat diakses melalui API. 
+     
+  3. Membuat REST Controller
+     REST Controller yang berisi fungsi untuk menampilkan, menambah, mengubah dan menghapus data. Caranya buat file ``Post.php`` di ``app/Controller`` dengan code seperti ini
+     
+     ![image](https://github.com/user-attachments/assets/6a49fbd5-e967-49a0-bb92-54ff684705a7)
+
+
+  4. Membuat Routing REST API
+     Masuk ke direktori app/Config dan bukalah file Routes.php. Tambahkan kode ``` $routes->resource('post');  ```
+  6. Lalu cek route nya jalankan perintah ``` php spark routes ``` di cmd
+     Satu baris kode routes yang di tambahkan akan menghasilkan banyak Endpoint seperti pada gambar dibawah ini.
+
+     ![image](https://github.com/user-attachments/assets/e6331de5-8161-4fee-a09f-380d221afc6c) 
+     
+    
 
   3.  ![image alt](https://github.com/ardhvka/Lab7web/blob/20ff49b1683647fe53cb587cc9058cbb1412b2b6/screnshoot/Api3.png)
 
